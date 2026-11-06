@@ -1,0 +1,10 @@
+$kind: http-request
+name: http://127.0.0.1:8000/graphql
+description: ""
+url: http://127.0.0.1:8000/graphql
+method: POST
+body:
+  type: json
+  content: "{ \"query\": \"{ productos { id nombre precio } }\" }\r\n"
+examples: .resources/http-127.0.0.1-8000-graphql.resources/examples
+order: 1000

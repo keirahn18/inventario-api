@@ -1,0 +1,35 @@
+$kind: http-example
+name: http://127.0.0.1:8000/graphql
+request:
+  url: http://127.0.0.1:8000/graphql
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"query\": \"mutation { crearProducto(nombre: \\\"Mouse\\\", precio: 18000, stock: 20) { id nombre stock } }\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Host: 127.0.0.1:8000
+    Connection: close
+    X-Powered-By: PHP/8.3.31
+    Cache-Control: no-cache, private
+    Date: Fri, 06 Nov 2026 00:36:18 GMT
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "data": {
+          "crearProducto": {
+            "id": "1",
+            "nombre": "Mouse",
+            "stock": 20
+          }
+        }
+      }
+order: 1000
